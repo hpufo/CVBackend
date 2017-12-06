@@ -1,0 +1,60 @@
+{
+status: "ok",
+advertisers: [
+    {
+      _id: "5964f4fc1d9b9e0400aad7a3",
+      agency_id: "5964f4fc1d9b9e0400aad7a2",
+      name: "Los Pollos Hermanos"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7a6",
+      agency_id: "5964f4fc1d9b9e0400aad7a2",
+      name: "Madrigal Electromotive"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7aa",
+      agency_id: "5964f4fc1d9b9e0400aad7a2",
+      name: "A1A Car Wash"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7ae",
+      agency_id: "5964f4fc1d9b9e0400aad7a2",
+      name: "Gray Matter Technologies"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7b2",
+      agency_id: "5964f4fc1d9b9e0400aad7a2",
+      name: "DEA"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7bb",
+      agency_id: "5964f4fc1d9b9e0400aad7b6",
+      name: "Bluth Company"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7b7",
+      agency_id: "5964f4fc1d9b9e0400aad7b6",
+      name: "The Banana Stand"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7be",
+      agency_id: "5964f4fc1d9b9e0400aad7b6",
+      name: "Gobias Industries"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7c3",
+      agency_id: "5964f4fc1d9b9e0400aad7b6",
+      name: "Straight to VHS"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7d4",
+      agency_id: "5964f4fc1d9b9e0400aad7c8",
+      name: "Oceanic Airlines"
+    },
+    {
+      _id: "5964f4fc1d9b9e0400aad7c9",
+      agency_id: "5964f4fc1d9b9e0400aad7c8",
+      name: "DHARMA Initiative"
+    }
+  ]
+}
