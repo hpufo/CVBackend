@@ -13,15 +13,5 @@ router.get('/agencies', function(req,res,next){
   })
   .catch(next);
 });
-//Delete later
-router.post('/agencies', function(req,res,next){
-  Agency.create(req.body)   //Creates a new instance of the agency and saves it
-  .then((agency) => {
-    res.send(agency);
-  })
-  .catch(next);
-});
-router.get('/campaigns', function(req,res,next){});
-router.post('/campaigns', function(req,res,next){});
 
 module.exports = router;

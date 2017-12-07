@@ -1,17 +1,17 @@
 {
-  status: "ok",
-    agencies: [
+  "status": "ok",
+    "agencies": [
     {
-      _id: "5964f4fc1d9b9e0400aad7a2",
-      name: "Better Call Saul"
+      "_id": "5964f4fc1d9b9e0400aad7a2",
+      "name": "Better Call Saul"
     },
     {
-      _id: "5964f4fc1d9b9e0400aad7b6",
-      name: "Bluth"
+      "_id": "5964f4fc1d9b9e0400aad7b6",
+      "name": "Bluth"
     },
     {
-      _id: "5964f4fc1d9b9e0400aad7c8",
-      name: "Lost"
+      "_id": "5964f4fc1d9b9e0400aad7c8",
+      "name": "Lost"
     }
   ]
 }
