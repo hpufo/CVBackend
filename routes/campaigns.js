@@ -36,7 +36,8 @@ router.post('/campaigns/:_id', function(req,res,next){
 
   Campaign.findOneAndUpdate({_id: req.params._id}, req.body)
   .then((campaign) => {
-    res.send(campaign)
+    response.campaigns = campaign;
+    res.send(response);
   })
   .catch(next);
 });
