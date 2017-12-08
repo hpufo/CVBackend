@@ -12,6 +12,11 @@ mongoose.connect('mongodb://localhost/MediaMath');
 mongoose.Promise = global.Promise;    //Overriting mongoose Promise with Node's
 
 //Middlewares: code that runs inbetween the request and the response
+app.use((req,res,next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next();
+});
 app.use(bodyParser.json());   //Parse the body as json to the resquest object
 app.use('/api',agencies);         //The routes from the route folder
 app.use('/api',advertisers);

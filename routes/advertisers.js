@@ -17,7 +17,7 @@ router.get('/advertisers', function(req,res,next){
     .catch(next);
   }
   else if(req.query.agency_id){
-    Advertiser.findOne({agency_id: req.query.agency_id})
+    Advertiser.find({agency_id: req.query.agency_id})
     .then((advertisers) => {
       response.advertisers = advertisers
       res.send(response);
