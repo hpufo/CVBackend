@@ -28,14 +28,23 @@ router.get('/campaigns/:_id', function(req,res,next){
   })
   .catch(next);
 });
-router.post('/campaigns', function(req,res,next){
-  
+router.post('/campaigns/:_id', function(req,res,next){
+  let startDate = formatDate(req.body.start_date);
+  let endDate = formatDate(req.body.end_date);
+  req.body.start_date = startDate;
+  req.body.end_date = endDate;
+
+  Campaign.findOneAndUpdate({_id: req.params._id}, req.body)
+  .then((campaign) => {
+    res.send(campaign)
+  })
+  .catch(next);
 });
 
-module.exports = router;
-
-function formatDate(date){
-  let date = new Date(date).toISOString();
+function formatDate(_date){
+  let date = new Date(_date).toISOString();
   date = date.substring(0,date.indexOf("T"))+timezone;  //Replacing the timezone of the date
   return date;
 }
+
+module.exports = router;
