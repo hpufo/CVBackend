@@ -21,7 +21,5 @@ router.post('/agencies', function(req,res,next){
   })
   .catch(next);
 });
-router.get('/campaigns', function(req,res,next){});
-router.post('/campaigns', function(req,res,next){});
 
 module.exports = router;

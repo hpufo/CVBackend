@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Agency = require('../models/agency');
 const Advertiser = require('../models/advertiser');
 
 router.get('/advertisers', function(req,res,next){

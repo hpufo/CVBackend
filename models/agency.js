@@ -11,7 +11,7 @@ const AngencySchema = new Schema({
     type: String,
     required: [true, 'Name field is required']
   }
-});
+},{versionKey: false});
 
 const Agency = mongoose.model('agency', AngencySchema);
 

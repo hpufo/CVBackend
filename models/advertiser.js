@@ -15,7 +15,7 @@ const AdvertiserSchema = new Schema({
     type: String,
     required: [true, 'Name field is required']
   }
-});
+},{versionKey: false});
 
 const Advertiser = mongoose.model('advertiser', AdvertiserSchema);
 

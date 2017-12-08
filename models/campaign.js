@@ -16,7 +16,7 @@ const CampaignSchema = new Schema({
     required: [true, 'name field is required']
   },
   status: {
-    tpye: Boolean,
+    type: Boolean,
     required: [true, "status field is required"]
   },
   budget: {
@@ -31,7 +31,7 @@ const CampaignSchema = new Schema({
     type: String,
     required: [true,"end_date field is required"]
   }
-});
+},{versionKey: false});
 
 const Campaign = mongoose.model('campaign', CampaignSchema);
 
