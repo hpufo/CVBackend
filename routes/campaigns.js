@@ -10,9 +10,15 @@ let response = {
 
 router.get('/campaigns', function(req,res,next){
   if(req.query.advertiser_id){
-    console.log(req.query.advertiser_id)
-
     Campaign.find({advertiser_id: req.query.advertiser_id}) //Eqiv to SELECT * FROM Campaign WHERE advertiser_id=req.query.advertiser_id
+    .then((campaigns) => {
+      response.campaigns = campaigns;
+      res.send(response);
+    })
+    .catch(next);
+  }
+  else{
+    Campaign.find({})
     .then((campaigns) => {
       response.campaigns = campaigns;
       res.send(response);
