@@ -10,7 +10,7 @@ const connectionString = process.env.MONGODB_URI || "mongodb://user:pass@ds13374
 const appPort = process.env.PORT || 4000;
 
 //connect to mongodb
-mongoose.connect(connectionString);
+mongoose.connect(connectionString, {useMongoClient: true});
 mongoose.Promise = global.Promise;    //Overwriting mongoose Promise with Node's
 
 //Middlewares: code that runs inbetween the request and the response
