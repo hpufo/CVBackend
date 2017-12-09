@@ -9,22 +9,17 @@ let response = {
 };
 
 router.get('/campaigns', function(req,res,next){
+  let selector = {}                                 //Eqiv to SELECT * FROM Campaign
+
   if(req.query.advertiser_id){
-    Campaign.find({advertiser_id: req.query.advertiser_id}) //Eqiv to SELECT * FROM Campaign WHERE advertiser_id=req.query.advertiser_id
-    .then((campaigns) => {
-      response.campaigns = campaigns;
-      res.send(response);
-    })
-    .catch(next);
+    selector.advertiser_id = req.query.advertiser_id; //Eqiv to SELECT * FROM Campaign WHERE advertiser_id=req.query.advertiser_id
   }
-  else{
-    Campaign.find({})
-    .then((campaigns) => {
-      response.campaigns = campaigns;
-      res.send(response);
-    })
-    .catch(next);
-  }
+  Campaign.find(selector)
+  .then((campaigns) => {
+    response.campaigns = campaigns;
+    res.send(response);
+  })
+  .catch(next);
 });
 router.get('/campaigns/:_id', function(req,res,next){
   Campaign.findOne({_id: req.params._id})

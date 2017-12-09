@@ -7,31 +7,21 @@ router.get('/advertisers', function(req,res,next){
     status: "ok",
     advertisers: null
   };
+  let selector = {};
   //Checks to see is there are query params
   if(req.query._id){
-    Advertiser.findOne({_id: req.query._id})
-    .then((advertisers) => {
-      response.advertisers = advertisers
-      res.send(response);
-    })
-    .catch(next);
+    selector._id = req.query._id; 
   }
-  else if(req.query.agency_id){
-    Advertiser.find({agency_id: req.query.agency_id})
-    .then((advertisers) => {
-      response.advertisers = advertisers
-      res.send(response);
-    })
-    .catch(next);
+  if(req.query.agency_id){
+    selector.agency_id = req.query.agency_id; 
   }
-  else{
-    Advertiser.find({})
-    .then((advertisers) => {
-      response.advertisers = advertisers
-      res.send(response);
-    })
-    .catch(next);
-  }
+  //DB Call to get the results based on the selector
+  Advertiser.find(selector)
+  .then((advertisers) => {
+    response.advertisers = advertisers
+    res.send(response);
+  })
+  .catch(next);
 });
 
 module.exports = router;

@@ -13,11 +13,5 @@ router.get('/agencies', function(req,res,next){
   })
   .catch(next);
 });
-router.post('/agencies', function(req,res,next){
-  Agency.create(req.body)   //Creates a new instance of the agency and saves it
-  .then((agency) => {
-    res.send(agency);
-  })
-  .catch(next);
-});
+
 module.exports = router;
