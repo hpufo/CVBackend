@@ -1,5 +1,5 @@
 # CVBackend
-This is the backend for the Campaign Viewer using Node, Express, Mongoose, and MongoDB
+This is the backend for the Campaign Viewer using Node, Express, Mongoose, and MongoDB. The purpose of this project was to copy MediaMath's mock API which will explain all of my design decisions.
 
 Install with: npm install
 
